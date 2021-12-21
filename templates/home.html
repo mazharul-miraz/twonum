@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+     <h5>hey dude ! <br>
+    calculate your two number</h5>
+    
+        <div class="row">
+            <div class="three columns">
+                <label for="exampleEmailInput">Number One</label>
+                <input class="u-full-width" type="number" placeholder="type number one">
+            </div>
+            <div class="three columns">
+                <label for="exampleEmailInput">Number Two</label>
+                <input class="u-full-width" type="number" placeholder="type number two">
+            </div>
+        </div>
+        <div class="row">
+            <div class="three columns">
+                <h3>Result</h3>
+                <input class="button-primary" type="button" value="Submit">
+            </div>
+        </div>
+  </div>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+{% endblock content %}
