@@ -6,24 +6,26 @@
   <div class="container">
      <h5>hey dude ! <br>
     calculate your two number</h5>
-    
+    <form action="{% url 'home' %}" method="POST">
+        {% csrf_token %}
         <div class="row">
             <div class="three columns">
                 <label for="exampleEmailInput">Number One</label>
-                <input class="u-full-width" type="number" placeholder="type number one">
+                <input class="u-full-width" type="number" placeholder="type number one" name="num1">
             </div>
             <div class="three columns">
                 <label for="exampleEmailInput">Number Two</label>
-                <input class="u-full-width" type="number" placeholder="type number two">
+                <input class="u-full-width" type="number" placeholder="type number two" name="num2">
             </div>
         </div>
         <div class="row">
             <div class="three columns">
-                <h3>Result</h3>
-                <input class="button-primary" type="button" value="Submit">
+                <h3>{{result}}</h3>
+                <input class="button-primary" type="submit" value="Submit">
             </div>
         </div>
-  </div>
+    </form>
+</div>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 {% endblock content %}

@@ -5,4 +5,13 @@ from django.shortcuts import render
 
 
 def home(request):
-    return render(request,'home.html')
+    
+    context ={}
+
+    var1 = request.POST.get("num1")
+    var2 = request.POST.get("num2")
+
+    if request.method == 'POST':
+        sum = int(var1) + int(var2)
+        context.update({'result':sum})
+    return render(request,'home.html',context)
